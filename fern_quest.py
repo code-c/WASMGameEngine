@@ -4,6 +4,8 @@
 
 # this is a template I used as a concept with the client
 
+## FERN QUEST WILL YOU BE A HUNTER OR A GATHERER! HERO OR FOE! you decide.
+
 # going to write this i c++ because it seems that it would be a better way to code this
 
 def walking():
