@@ -6,20 +6,21 @@
  * A Game Object is made and that's the magic. We interact with the game here. Only things that are
  * needed in the game storyline are stored in this player class.
 */
-
 #include <iostream>
+#include <utility>
 #include <vector>
-#include <zconf.h>
+#include <zconf.h> // sleep
 #include "Item.h"
-#include "Player.h"
 #include "Game.h"
-
+#include "Player.h"
 using namespace std;
 
 // constructor for player
 Player::Player() : packSize(10), itemHeld() { }
 // overloaded constructor
-Player::Player(string name) {
+Player::Player(string name) : name(std::move(name)), game(Game()){
+    cout << "starting player account: " + this->name << endl;
+    game.loadStory();
 
 }
 

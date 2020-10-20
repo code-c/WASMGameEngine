@@ -1,13 +1,13 @@
 //the main for the everything where we run the game.
 // author: Codie Cottrell
 #include <iostream>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <vector>
-#include "Item.h"
 #include "Player.h"
 using namespace std;
 
 int main(){
-  Player eddie = Player();
-  eddie.walk();
+    string eddie = "eddie";
+    Player playerOne = Player(eddie);
+    playerOne.walk();
 }

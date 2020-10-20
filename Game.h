@@ -1,27 +1,19 @@
-//
-// Created by Codie Cottrell on 10/19/20.
-//
+/* -------------------------------------------
+ * ------------ Game Class Header ------------
+ * -------------------------------------------
+ *
+ * This is where the magic happens. Everything in here is how the player
+ * interacts with the storyline and quests, as well as gets around the
+ * world!
+ */
 
-#ifndef FERNQUEST_GAME_H
-#define FERNQUEST_GAME_H
-
+#ifndef GAME_H
+#define GAME_H
 
 class Game {
-
 public:
-    Bag bag; // we got ourselves a bag boys!
-    //Quest currentQuest; // TODO: create quest class.
-    //QuestMap story; TODO: create structure for quests to be stored in graph
-
-
-    // methods
     Game();
-
-    void loadGame();
-
-
-
+    void loadStory();
 };
 
-
-#endif //FERNQUEST_GAME_H
+#endif

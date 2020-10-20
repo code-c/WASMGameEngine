@@ -6,7 +6,7 @@ using namespace std;
 
 Item::Item() : rarity(0), worth(0){ }
 
-Item::Item(string name, int rarity, int worth) : rarity(rarity), worth(worth){ }
+Item::Item(const string& name, int rarity, int worth) : rarity(rarity), worth(worth){ }
 
 int Item::getRarity() const {
     return rarity;

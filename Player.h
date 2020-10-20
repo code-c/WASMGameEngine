@@ -6,19 +6,18 @@
  * A Game Object is made and that's the magic. We interact with the game here. Only things that are
  * needed in the game storyline are stored in this player class.
 */
-
 #ifndef PLAYER_H
 #define PLAYER_H
 
 class Player {
 public:
     std::string name; // the name they choose
-    int health;
-    int hunger;
-    int environmentalistGrade;
-    int packSize;
-    Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     Game game;
+    int health{};
+    int hunger{};
+    int environmentalistGrade{};
+    int packSize{};
+    Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
     Player();
     Player(std::string name);
