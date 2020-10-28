@@ -15,8 +15,6 @@
 #include "Player.h"
 using namespace std;
 
-// constructor for player
-Player::Player() : packSize(10), itemHeld() { }
 // overloaded constructor
 Player::Player(string name) : name(std::move(name)), game(Game()){
     cout << "starting player account: " + this->name << endl;

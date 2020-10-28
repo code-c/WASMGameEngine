@@ -1,7 +1,6 @@
 //the main for the everything where we run the game.
 // author: Codie Cottrell
 #include <iostream>
-//#include <stdlib.h>
 #include <vector>
 #include "Player.h"
 using namespace std;

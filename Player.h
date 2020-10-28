@@ -9,17 +9,19 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "Game.h"
+#include "Item.h"
+
 class Player {
 public:
     std::string name; // the name they choose
     Game game;
-    int health{};
-    int hunger{};
-    int environmentalistGrade{};
-    int packSize{};
+    int health;
+    int hunger;
+    int environmentalistGrade;
+    int packSize;
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
-    Player();
     Player(std::string name);
     void walk();
 };
