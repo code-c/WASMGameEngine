@@ -68,7 +68,7 @@ void QuestLog::printList(Quest* ptr)
 }
 
 // Graph Implementation in C++ without using STL
-int main()
+/*int main()
 {
     vector<string> questFiles = {"Quests/eccentialItems.txt"};
     // array of graph edges as per above diagram.
@@ -99,4 +99,4 @@ int main()
     }
 
     return 0;
-}
+}*/

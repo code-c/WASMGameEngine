@@ -27,7 +27,6 @@ struct Quest {
  */
 struct Path {
     int srcId,  endId;
-    bool activated;
 };
 
 
