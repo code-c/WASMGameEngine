@@ -1,0 +1,6 @@
+qId: 1
+mainStory: true
+ItemReceived: [Stick: "The Beaver Stick"]
+NPCs: [Beaver: "Castor"]
+Dialog: ["oh didnt see you there": ["who are you?", "bye"], "Im Castor the great dam builder, but I cant
+seem to get this hole plugged.. Do you have anything?": ["no", "here try this!"], "That did it! Here take this I no longer need it"]

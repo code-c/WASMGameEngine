@@ -7,13 +7,14 @@ class Item {
 private:
     int rarity;
     int worth;
+    std::string name;
 public:
     Item(); // generic constructor
-    Item(int rarity, int worth); // constructor for specific items. (eventually we will import item stats.)
+    Item(const std::string& name, int rarity, int worth); // constructor for specific items. (eventually we will import item stats.)
 
     int getRarity() const;
     int getWorth() const;
-
+    std::string toString();
 };
 
 #endif

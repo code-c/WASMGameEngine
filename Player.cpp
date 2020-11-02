@@ -1,13 +1,26 @@
+/* --------------------
+ * --- Player Class ---
+ * --------------------
+ *  AUTHOR: Codie Cottrell
+ * Here is where the game starts. A player creates their name on screen and the player is initialized!
+ * A Game Object is made and that's the magic. We interact with the game here. Only things that are
+ * needed in the game storyline are stored in this player class.
+*/
 #include <iostream>
-#include <stdlib.h>
+#include <utility>
 #include <vector>
-#include <zconf.h>
+#include <zconf.h> // sleep
 #include "Item.h"
+#include "Game.h"
 #include "Player.h"
 using namespace std;
 
+// overloaded constructor
+Player::Player(string name) : name(std::move(name)), game(Game()){
+    cout << "starting player account: " + this->name << endl;
+    game.loadStory();
 
-Player::Player() : packSize(10), itemHeld(0) { }
+}
 
 void Player::walk() {
     for(int i = 0; i <= 5; i++){
