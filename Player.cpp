@@ -13,7 +13,9 @@
 #include "Item.h"
 #include "Game.h"
 #include "Player.h"
+#include <fstream>
 using namespace std;
+
 
 // overloaded constructor
 Player::Player(string name) : name(std::move(name)), game(Game()){

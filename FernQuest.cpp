@@ -1,9 +1,29 @@
 //the main for the everything where we run the game.
 // author: Codie Cottrell
+#include <fstream>
 #include <iostream>
 #include <vector>
 #include "Player.h"
 using namespace std;
+
+Player createNewPlayer() {
+    string name;
+    cout << "enter your name" << endl;
+    cin >> name;
+    Player newPlayer = Player(name);
+
+    // open a new profile file to store the player  it
+    try{
+        ofstream playerProfile (name + ".txt");
+        boost::archive::
+        (playerProfile, newPlayer);
+
+    } catch (exception const& e) {
+        cout << "could not create player profile error: " << e.what() << endl;
+    }
+
+    return newPlayer;
+}
 
 Player menuLoop() {
     do {
@@ -14,10 +34,7 @@ Player menuLoop() {
         // start or create a game
         switch(option) {
             case 1: {
-                string name;
-                cout << "enter your name" << endl;
-                cin >> name;
-                Player newPlayer = Player(name);
+                Player newPlayer = createNewPlayer();
                 return newPlayer;
             }
             case 2: {

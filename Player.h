@@ -9,22 +9,40 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+// I am still unsure why I need to include these headers here
 #include "Game.h"
 #include "Item.h"
+#include <boost/serialization/string.hpp>
 
 class Player {
+private:
+    friend class boost::serialization::access;
 public:
     std::string name; // the name they choose
     Game game;
-    int health;
-    int hunger;
-    int environmentalistGrade;
-    int packSize;
+    int health{100};
+    int hunger{10};
+    int environmentalistGrade{0};
+    int packSize{20};
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
     Player(std::string name);
     void walk();
+
 };
+// boost serialization of the player
+namespace boost {
+    namespace serialization {
+
+        template<class Archive>
+        void save(Archive & ar, Player & player, const unsigned int version)
+        {
+            ar & player.name;
+        }
+
+    } // namespace serialization
+} // namespace boost
+
 
 // strenght perameter
 // witty perameter
