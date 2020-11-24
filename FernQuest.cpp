@@ -8,21 +8,26 @@ using namespace std;
 
 Player createNewPlayer() {
     string name;
-    cout << "enter your name" << endl;
+    cout << "enter your players name" << endl;
     cin >> name;
+
+    // create the new player
     Player newPlayer = Player(name);
 
-    // open a new profile file to store the player  it
+    // open a new profile text file to store the player
     try{
-        ofstream playerProfile (name + ".txt");
-        boost::archive::
-        (playerProfile, newPlayer);
-
+        ofstream playerProfile("/Users/codiecottrell/Documents/FernQuest/playerProfiles/" + name + ".xml"); //create file for player
+        boost::archive::xml_oarchive saveFile(playerProfile);
+        saveFile << BOOST_SERIALIZATION_NVP(newPlayer);
+        playerProfile.close();
+        return newPlayer;
     } catch (exception const& e) {
         cout << "could not create player profile error: " << e.what() << endl;
     }
+}
 
-    return newPlayer;
+Player loadPlayers() {
+
 }
 
 Player menuLoop() {
@@ -39,8 +44,7 @@ Player menuLoop() {
             }
             case 2: {
                 cout << "select your profile" << endl;
-                // create a way to store the player.
-                // return player from selected num
+                Player currentPlayer = loadPlayers();
                 break;
             }
             case 3: {

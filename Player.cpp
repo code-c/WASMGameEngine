@@ -13,7 +13,9 @@
 #include "Item.h"
 #include "Game.h"
 #include "Player.h"
-#include <fstream>
+#include <boost/archive/xml_oarchive.hpp>
+#include <boost/archive/xml_iarchive.hpp>
+
 using namespace std;
 
 
@@ -30,3 +32,6 @@ void Player::walk() {
         sleep(1);
     }
 }
+
+
+

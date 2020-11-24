@@ -13,10 +13,28 @@
 #include "Game.h"
 #include "Item.h"
 #include <boost/serialization/string.hpp>
+#include <boost/archive/xml_oarchive.hpp>
+#include <boost/archive/xml_iarchive.hpp>
 
 class Player {
 private:
+    // boost serialization save and load of the player
     friend class boost::serialization::access;
+    template<class Archive>
+    void save(Archive &ar, const unsigned int version) const {
+        ar & BOOST_SERIALIZATION_NVP(name);
+        std::cout << "Saved Game!!" << std::endl;
+    };
+    template<class Archive>
+    void load(Archive &ar, const unsigned int version) {
+        ar & BOOST_SERIALIZATION_NVP(name);
+        std::cout << "Loaded Game!!" << std::endl;
+    };
+    BOOST_SERIALIZATION_SPLIT_MEMBER()
+    //template<class Archive>
+//void Player::serialize(Archive &archive, const unsigned int version) {
+//    boost::serialization::split_member(archive, *this, version);
+//}
 public:
     std::string name; // the name they choose
     Game game;
@@ -31,17 +49,6 @@ public:
 
 };
 // boost serialization of the player
-namespace boost {
-    namespace serialization {
-
-        template<class Archive>
-        void save(Archive & ar, Player & player, const unsigned int version)
-        {
-            ar & player.name;
-        }
-
-    } // namespace serialization
-} // namespace boost
 
 
 // strenght perameter
