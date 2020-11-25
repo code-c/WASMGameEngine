@@ -34,6 +34,3 @@ void Player::walk() {
 }
 
 Player::Player() : game(Game()) {}
-
-
-
