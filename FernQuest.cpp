@@ -240,9 +240,6 @@ Player menuLoop() {
 
 int main(){
         Player player = menuLoop();
-        player.walk();
-        //string eddie = "eddie";
-        //Player playerOne = Player(eddie);
-        //playerOne.walk();
+        player.openGame();
 }
 

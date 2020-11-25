@@ -46,6 +46,7 @@ public:
     std::vector<Item> pack;
     Player();
     Player(std::string name);
+    void openGame();
     void walk();
 };
 // boost serialization of the player

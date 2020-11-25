@@ -26,6 +26,11 @@ Player::Player(string name) : name(std::move(name)), game(Game()){
 
 }
 
+void Player::openGame() {
+    cout << "opening game" << endl;
+    exit(0);
+}
+
 void Player::walk() {
     for(int i = 0; i <= 5; i++){
         cout << "..." << endl;
