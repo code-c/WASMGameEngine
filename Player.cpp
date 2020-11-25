@@ -13,7 +13,11 @@
 #include "Item.h"
 #include "Game.h"
 #include "Player.h"
+#include <boost/archive/xml_oarchive.hpp>
+#include <boost/archive/xml_iarchive.hpp>
+
 using namespace std;
+
 
 // overloaded constructor
 Player::Player(string name) : name(std::move(name)), game(Game()){
@@ -28,3 +32,8 @@ void Player::walk() {
         sleep(1);
     }
 }
+
+Player::Player() : game(Game()) {}
+
+
+

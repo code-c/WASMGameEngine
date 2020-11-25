@@ -1,13 +1,26 @@
-Storyline:
+<--------------------------- Backstory --------------------------------->
 
-Introduction:
-[open onto a grassy knoll, as the camera proceeds through trees we open up to a young adventurer walking up a steep hill
-to gaze at the surroundings. The adventurer it jostled by a disturbance in the distance! We enter first person view.
+You are a traveler in a vast kingdom and you're on a stroll through a peculiar forest.
 
-We run off to explore:
+<------------------------ Object Of The Game --------------------------->
 
-**The map should direct the person to this location that the adventurer saw, and then they are brought to the first quest**
+To teach preservation and respect for nature as well as provide a fun game based off a few classic games.
 
+<--------------------------- StoryLines -------------------------------->
 
-There is a knight waging war on the local forest animals, there is a princess in distress and we have to deeat the kight
-to get the princess.
+- Become the champion knight of the animals!
+  - assist the beaver in building his dam
+  - assist the red squirrel in gathering food
+  - clear the paths for deer
+
+<------------------------- Future developments -------------------------->
+
+- learn magic to ward off the evil that lurks in the depths of the forest!
+  - learn the grow spell from the gnomes
+  - learn the water hose spell from the water sprites
+  - learn the fire spell from the fire fairies
+- Become a settler of this small land and become King of the forest!
+  - build a home
+    - gather wood?
+  - build a garden
+    - feed the town?
