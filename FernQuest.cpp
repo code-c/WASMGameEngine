@@ -124,7 +124,7 @@ Player loadPlayers() {
 
     // open the txt file associated with profile name
     player = playerProfiles.at(--selectedProfile); // undo the +1 done above
-    ifstream currentProfile("/Users/codiecottrell/Documents/FernQuest/playerProfiles/" + player + ".txt");
+    ifstream currentProfile("/Users/codiecottrell/Documents/FernQuest/playerProfiles/" + player);
     boost::archive::text_iarchive ar(currentProfile);
 
     // store the playerProfile into the empty playerObject.
