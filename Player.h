@@ -13,8 +13,8 @@
 #include "Game.h"
 #include "Item.h"
 #include <boost/serialization/string.hpp>
-#include <boost/archive/xml_oarchive.hpp>
-#include <boost/archive/xml_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 
 class Player {
 private:
@@ -44,9 +44,9 @@ public:
     int packSize{20};
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
+    Player();
     Player(std::string name);
     void walk();
-
 };
 // boost serialization of the player
 
