@@ -81,6 +81,8 @@ int deleteProfile(vector<string> playerProfiles) {
     }
 }
 
+// loads the playerProfile names and loads a player Profile from selection
+// sets the current player and returns the value of player.
 Player loadPlayers() {
     // declare variables
     bool valid; // valid input
@@ -133,6 +135,9 @@ Player loadPlayers() {
 
 }
 
+// loads a new player Profile from given name only if empty spot available.
+// sets it to the current player and returns the value of player.
+// can delete players from this option as well.
 Player createNewPlayer() {
     // declare variables
     string name; // new name
@@ -199,6 +204,7 @@ Player createNewPlayer() {
     }
 }
 
+// this is the main menu loop that exits once a player profile is selected
 Player menuLoop() {
     do {
         int option = 0; // quick note we have a loop on default.
