@@ -9,22 +9,47 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+// I am still unsure why I need to include these headers here
 #include "Game.h"
 #include "Item.h"
+#include <boost/serialization/string.hpp>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 
 class Player {
+private:
+    // boost serialization save and load of the player
+    friend class boost::serialization::access;
+    template<class Archive>
+    void save(Archive &ar, const unsigned int version) const {
+        ar & BOOST_SERIALIZATION_NVP(name);
+        std::cout << "Saved Game!!" << std::endl;
+    };
+    template<class Archive>
+    void load(Archive &ar, const unsigned int version) {
+        ar & BOOST_SERIALIZATION_NVP(name);
+        std::cout << "Loaded Game!!" << std::endl;
+    };
+    BOOST_SERIALIZATION_SPLIT_MEMBER()
+    //template<class Archive>
+//void Player::serialize(Archive &archive, const unsigned int version) {
+//    boost::serialization::split_member(archive, *this, version);
+//}
 public:
     std::string name; // the name they choose
     Game game;
-    int health;
-    int hunger;
-    int environmentalistGrade;
-    int packSize;
+    int health{100};
+    int hunger{10};
+    int environmentalistGrade{0};
+    int packSize{20};
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
+    Player();
     Player(std::string name);
     void walk();
 };
+// boost serialization of the player
+
 
 // strenght perameter
 // witty perameter
