@@ -23,7 +23,6 @@ using namespace std;
 Player::Player(string name) : name(std::move(name)), game(Game()){
     cout << "starting player account: " + this->name << endl;
     game.loadStory();
-
 }
 
 void Player::openGame() {
