@@ -9,12 +9,14 @@ using namespace std;
 
 // constructors
 
-Entity::Entity(bool interactive, int hp, vector<double> xCoordinate, vector<double> yCoordinate) : interactive(interactive), hp(hp) , xCoordinate(std::move(xCoordinate)), yCoordinate(yCoordinate){}
+//default constructor
+Entity::Entity() : interactive(false), hp(0) , xCoordinate({0,0}), yCoordinate({0,0}){}
 
-Entity::Entity(bool interactive, int hp) : interactive(interactive), hp(hp) {}
+Entity::Entity(bool interactive, int hp, const vector<double>& xCoordinate, const vector<double>& yCoordinate) : interactive(interactive), hp(hp) , xCoordinate(std::move(xCoordinate)), yCoordinate(std::move(yCoordinate)){}
 
-Entity::Entity(bool interactive) : interactive(interactive) {}
+Entity::Entity(bool interactive, int hp) : interactive(interactive), hp(hp), xCoordinate({0,0}), yCoordinate({0,0}){}
 
+Entity::Entity(bool interactive) : interactive(interactive), hp(0) , xCoordinate({0,0}), yCoordinate({0,0}) {}
 
 // variable setters and getters
 
@@ -49,7 +51,7 @@ pair<vector<double>, vector<double>> Entity::getLocation() {
 }
 
 // update the location of an entity
-void Entity::updateLocation(vector<double> xCoordinate, vector<double> yCoordinate){
+void Entity::updateLocation(const vector<double>& xCoordinate, const vector<double>& yCoordinate){
     if (Entity::xCoordinate != xCoordinate) {
         Entity::xCoordinate = xCoordinate;
     }
@@ -69,7 +71,6 @@ void Entity::printLocation() {
     cout<< "start corner: " << "( " << to_string(xStart) << ", " << to_string(yStart) << " )" << endl;
     cout<< "end corner: " << "( " << to_string(xEnd) << ", " << to_string(yEnd) << " )" << endl;
 }
-
 
 //testing
 //int main(){

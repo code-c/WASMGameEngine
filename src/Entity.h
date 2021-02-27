@@ -12,6 +12,7 @@ class Entity {
 private:
     int hp;
     bool interactive;
+    bool interacted;
     std::vector<double> xCoordinate,yCoordinate;
 
 public:
@@ -23,11 +24,13 @@ public:
     std::pair<std::vector<double>, std::vector<double>> getLocation();
 
 
-    Entity(bool interactive, int hp, std::vector<double> xCoordinate, std::vector<double> yCoordinate);
+    Entity(bool interactive, int hp, const std::vector<double>& xCoordinate, const std::vector<double>& yCoordinate);
     Entity(bool interactive, int hp);
     Entity(bool interactive);
+    Entity();
 
-    void updateLocation(std::vector<double> xCoordinate, std::vector<double> yCoordinate);
+    void updateLocation(const std::vector<double>& xCoordinate, const std::vector<double>& yCoordinate);
+    void interact();
 
     //debug funcs
     void printLocation();
