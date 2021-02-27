@@ -11,9 +11,11 @@
 #define GAME_H
 
 class Game {
+    std::string currentMap;
 public:
     Game();
     void loadStory();
+
 };
 
 #endif

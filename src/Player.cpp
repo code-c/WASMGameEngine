@@ -9,7 +9,7 @@
 #include <iostream>
 #include <utility>
 #include <vector>
-#include <zconf.h> // sleep
+//#include <zconf.h> // sleep
 #include "Item.h"
 #include "Game.h"
 #include "Player.h"
@@ -33,7 +33,7 @@ void Player::openGame() {
 void Player::walk() {
     for(int i = 0; i <= 5; i++){
         cout << "..." << endl;
-        sleep(1);
+        //sleep(1);
     }
 }
 

@@ -20,7 +20,7 @@ add_executable(FernQuest src/FernQuest.cpp
         src/Item.cpp src/Item.h
         src/Player.cpp src/Player.h
         src/Game.cpp src/Game.h
-        src/QuestLog.cpp src/QuestLog.h)
+        src/QuestLog.cpp src/QuestLog.h src/Entity.cpp src/Entity.h)
 
 
 if(Boost_FOUND)

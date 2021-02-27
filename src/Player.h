@@ -41,12 +41,14 @@ public:
     int health{100};
     int hunger{10};
     int environmentalistGrade{0};
+    //int location{0,0};
     int packSize{20};
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
     Player();
     Player(std::string name);
     void openGame();
+    int getLocation();
     void walk();
 };
 // boost serialization of the player
