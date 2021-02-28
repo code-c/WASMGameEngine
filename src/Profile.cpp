@@ -1,5 +1,5 @@
 /* --------------------
- * --- Player Class ---
+ * --- Profile Class ---
  * --------------------
  *  AUTHOR: Codie Cottrell
  * Here is where the game starts. A player creates their name on screen and the player is initialized!
@@ -12,7 +12,7 @@
 //#include <zconf.h> // sleep
 #include "Item.h"
 #include "Game.h"
-#include "Player.h"
+#include "Profile.h"
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 
@@ -20,21 +20,21 @@ using namespace std;
 
 
 // overloaded constructor
-Player::Player(string name) : name(std::move(name)), game(Game()){
+Profile::Profile(string name) : name(std::move(name)), game(Game()){
     cout << "starting player account: " + this->name << endl;
     game.loadStory();
 }
 
-void Player::openGame() {
+void Profile::openGame() {
     cout << "opening game" << endl;
     exit(0);
 }
 
-void Player::walk() {
+void Profile::walk() {
     for(int i = 0; i <= 5; i++){
         cout << "..." << endl;
         //sleep(1);
     }
 }
 
-Player::Player() : game(Game()) {}
+Profile::Profile() : game(Game()) {}

@@ -1,5 +1,5 @@
 /* ---------------------------
- * --- Player Class Header ---
+ * --- Profile Class Header ---
  * ---------------------------
  *  AUTHOR: Codie Cottrell
  * Here is where the game starts. A player creates their name on screen and the player is initialized!
@@ -16,7 +16,7 @@
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 
-class Player {
+class Profile {
 private:
     // boost serialization save and load of the player
     friend class boost::serialization::access;
@@ -32,7 +32,7 @@ private:
     };
     BOOST_SERIALIZATION_SPLIT_MEMBER()
     //template<class Archive>
-//void Player::serialize(Archive &archive, const unsigned int version) {
+//void Profile::serialize(Archive &archive, const unsigned int version) {
 //    boost::serialization::split_member(archive, *this, version);
 //}
 public:
@@ -45,8 +45,8 @@ public:
     int packSize{20};
     Item itemHeld; // reference to item in pack (anything magical, staff, shield, etc)
     std::vector<Item> pack;
-    Player();
-    Player(std::string name);
+    Profile();
+    Profile(std::string name);
     void openGame();
     int getLocation();
     void walk();
