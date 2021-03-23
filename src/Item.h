@@ -3,17 +3,28 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-class Item {
+#include "Entity.h"
+
+class Item: public Entity{
 private:
-    int rarity;
-    int worth;
+    int value;
+    int type; //weapon, utility, food, material
     std::string name;
 public:
     Item(); // generic constructor
-    Item(const std::string& name, int rarity, int worth); // constructor for specific items. (eventually we will import item stats.)
+    Item(std::string  name, int value, int type); // constructor for specific items. (eventually we will import item stats.)
 
-    int getRarity() const;
-    int getWorth() const;
+    //setters
+    void setValue(int value);
+    void setType(int type);
+    void setName(const std::string &name);
+
+    //getters
+    int getValue() const;
+    int getType() const;
+    std::string getName() const;
+
+    //debug
     std::string toString();
 };
 

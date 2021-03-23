@@ -238,8 +238,8 @@ Player menuLoop() {
     } while(true);
 }
 
-int main(){
-        Player player = menuLoop();
-        player.openGame();
-}
+//int main(){
+//        Player player = menuLoop();
+//        player.openGame();
+//}
 
