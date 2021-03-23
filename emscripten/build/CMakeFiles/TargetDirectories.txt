@@ -1,0 +1,3 @@
+/Users/codiecottrell/Documents/FernQuest/emscripten/build/CMakeFiles/rebuild_cache.dir
+/Users/codiecottrell/Documents/FernQuest/emscripten/build/CMakeFiles/edit_cache.dir
+/Users/codiecottrell/Documents/FernQuest/emscripten/build/CMakeFiles/FernQuest.dir

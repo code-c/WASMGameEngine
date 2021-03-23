@@ -1,0 +1,1 @@
+/Users/codiecottrell/emsdk/upstream/emscripten/em++  -s USE_BOOST_HEADERS=1 -s WASM=1 -s EXPORTED_FUNCTIONS='[_main]' -s ERROR_ON_UNDEFINED_SYMBOLS=0 @CMakeFiles/FernQuest.dir/objects1.rsp -o ../out/FernQuest.js 
