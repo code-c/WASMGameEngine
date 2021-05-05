@@ -71,7 +71,7 @@ void Map::buildMainMap() {
                 cout << "index: " << rowIdx << ", " << colIdx << endl;
 
                 //store
-                mainMap.insert(pair<int, pair<int, string&>> (rowIdx, pair<int, string>(colIdx, tileName));
+                mainMap.insert(pair<int, pair<int, string&>> (rowIdx, pair<int, string>(colIdx, tileName)));
 
                 // Increment the column index
                 colIdx++;

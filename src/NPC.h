@@ -5,9 +5,18 @@
 #ifndef FERNQUEST_NPC_H
 #define FERNQUEST_NPC_H
 
+#include "Entity.h"
+#include "Item.h"
+class NPC : public Entity {
+private:
+    Item itemDrop;
+    std::string nameRequiredItem;
 
-class NPC {
-
+public:
+    NPC();
+    NPC(Item item);
+    void interact();
+    Item interact(Item item);
 };
 
 

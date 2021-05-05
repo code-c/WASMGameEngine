@@ -72,6 +72,10 @@ void Entity::printLocation() {
     cout<< "end corner: " << "( " << to_string(xEnd) << ", " << to_string(yEnd) << " )" << endl;
 }
 
+ void Entity::interact() {
+    cout << "HI" << endl;
+}
+
 //testing
 //int main(){
 //    vector<double> xCoordinates {0,10};

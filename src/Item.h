@@ -4,6 +4,7 @@
 #define ITEM_H
 
 #include "Entity.h"
+#include <string>
 
 class Item: public Entity{
 private:
@@ -12,17 +13,19 @@ private:
     std::string name;
 public:
     Item(); // generic constructor
-    Item(std::string  name, int value, int type); // constructor for specific items. (eventually we will import item stats.)
+    Item(std::string &name, int value, int type); // constructor for specific items. (eventually we will import item stats.)
 
     //setters
     void setValue(int value);
     void setType(int type);
-    void setName(const std::string &name);
+    void setName(std::string name);
 
     //getters
     int getValue() const;
     int getType() const;
-    std::string getName() const;
+    std::string getName();
+
+    void interact() override;
 
     //debug
     std::string toString();

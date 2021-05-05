@@ -7,7 +7,7 @@
 
 #include "Item.h"
 
-class Bridge : Item {
+class Bridge : public Item {
 private:
     static bool const placed{false};
 public:

@@ -30,7 +30,7 @@ public:
     Entity();
 
     void updateLocation(const std::vector<double>& xCoordinate, const std::vector<double>& yCoordinate);
-    void interact();
+    virtual void interact();
 
     //debug funcs
     void printLocation();
