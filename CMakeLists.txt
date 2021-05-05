@@ -18,13 +18,19 @@ endif()
 
 add_executable(FernQuest src/FernQuest.cpp
         src/Item.cpp src/Item.h
-        src/Player.cpp src/Player.h
+        src/Profile.cpp src/Profile.h
         src/Game.cpp src/Game.h
         src/QuestLog.cpp src/QuestLog.h
         src/Entity.cpp src/Entity.h
         src/Key.cpp src/Key.h
         src/Chest.cpp src/Chest.h
-        src/Bridge.cpp src/Bridge.h)
+        src/Bridge.cpp src/Bridge.h
+        src/Player.cpp src/Player.h
+        src/Inventory.cpp src/Inventory.h
+        src/NPC.cpp src/NPC.h
+        src/Interact.cpp src/Interact.h
+        #FernQuestBindings.cpp
+        src/Map.cpp src/Map.h)
 
 
 if(Boost_FOUND)

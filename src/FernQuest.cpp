@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include "Player.h"
+#include "Profile.h"
 #include <boost/algorithm/string.hpp>
 using namespace std;
 
@@ -83,7 +83,7 @@ int deleteProfile(vector<string> playerProfiles) {
 
 // loads the playerProfile names and loads a player Profile from selection
 // sets the current player and returns the value of player.
-Player loadPlayers() {
+Profile loadPlayers() {
     // declare variables
     bool valid; // valid input
     int num = 0; // number in cout next to name
@@ -91,7 +91,7 @@ Player loadPlayers() {
     string player;
     vector<string> playerProfiles; // vector of profile names
 
-    Player currentPlayer;
+    Profile currentPlayer;
 
     // read the files as strings from the profile directory into the vector
     readDirectory("/Users/codiecottrell/Documents/FernQuest/playerProfiles/", playerProfiles);
@@ -138,7 +138,7 @@ Player loadPlayers() {
 // loads a new player Profile from given name only if empty spot available.
 // sets it to the current player and returns the value of player.
 // can delete players from this option as well.
-Player createNewPlayer() {
+Profile createNewPlayer() {
     // declare variables
     string name; // new name
     vector<string> playerProfiles; // vector of profile names
@@ -188,7 +188,7 @@ Player createNewPlayer() {
     }
 
     // create the new player
-    Player newPlayer = Player(name);
+    Profile newPlayer = Profile(name);
 
     // open a new profile text file to store the player
     try{
@@ -205,7 +205,7 @@ Player createNewPlayer() {
 }
 
 // this is the main menu loop that exits once a player profile is selected
-Player menuLoop() {
+Profile menuLoop() {
     do {
         int option = 0; // quick note we have a loop on default.
         cout << "Welcome to Fern Quest! please enter a number from the following options:" << endl;
@@ -214,12 +214,12 @@ Player menuLoop() {
         // start or create a game
         switch(option) {
             case 1: {
-                Player newPlayer = createNewPlayer();
+                Profile newPlayer = createNewPlayer();
                 return newPlayer;
             }
             case 2: {
                 cout << "Enter your profiles number or name" << endl;
-                Player currentPlayer = loadPlayers();
+                Profile currentPlayer = loadPlayers();
                 return currentPlayer;
             }
             case 3: {
@@ -237,9 +237,9 @@ Player menuLoop() {
         }
     } while(true);
 }
-
+//
 //int main(){
-//        Player player = menuLoop();
+//        Profile player = menuLoop();
 //        player.openGame();
 //}
 

@@ -8,7 +8,7 @@ using namespace std;
 //default constructor
 Item::Item() : name(""), value(0), type(0){ }
 
-Item::Item(string name, int value, int type) : name(std::move(name)), value(value), type(type) { }
+Item::Item(string &name, int value, int type) : name(std::move(name)), value(value), type(type) { }
 
 //getters and setters
 
@@ -19,11 +19,11 @@ void Item::setType(int type) {
     Item::type = type;
 }
 
-void Item::setName(const string &name) {
+void Item::setName(string name) {
     Item::name = name;
 }
 
-string Item::getName() const {
+string Item::getName() {
     return name;
 }
 
@@ -33,6 +33,10 @@ int Item::getValue() const {
 
 int Item::getType() const {
     return type;
+}
+
+void Item::interact(){
+    cout << "placing item in inventory" << endl;
 }
 
 string Item::toString() {

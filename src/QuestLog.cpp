@@ -13,6 +13,11 @@
 #include "QuestLog.h"
 using namespace std;
 
+//default constructor
+QuestLog::QuestLog(){
+    //Path paths[] = buildPathsFromDir();
+}
+
 QuestLog::QuestLog(vector<string> questFiles, Path paths[], int n, int N) {
     // allocate memory
     head = new Quest*[N]();
@@ -54,6 +59,11 @@ QuestLog::~QuestLog() {
         delete[] head[i];
 
     delete[] head;
+}
+
+Path QuestLog::buildPathsFromDir() {
+    //read files from quest and build paths based on
+    // 'next quest' stored in txt file
 }
 
 // print all neighboring vertices of given vertex

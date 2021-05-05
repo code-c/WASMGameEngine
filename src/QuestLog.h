@@ -10,6 +10,8 @@
 #ifndef QUESTLOG_H
 #define QUESTLOG_H
 
+#include <string>
+
 /* Quests are nodes which store id of quest (i.e. 1,2,3...200)
  * whether player has visited the quest, completed the quest.
  * stores next quest pointer, and the previous quest pointer
@@ -37,9 +39,18 @@ class QuestLog {
     Quest* addQuestNode(int dest, Quest* head);
 public:
     Quest **head;
+
+    //constructor
+    QuestLog();
     QuestLog(std::vector<std::string> questFiles, Path paths[], int n, int N);
+
     ~QuestLog(); //deConstructor
+
+    Path buildPathsFromDir();
     void printList(Quest* ptr);
+
+
+
 
 };
 

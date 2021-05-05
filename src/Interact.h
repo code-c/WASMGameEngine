@@ -7,7 +7,12 @@
 
 
 class Interact {
-
+private:
+    bool interacted;
+public:
+    //Interact();
+    static std::string playerMove();
+    static std::string playerItemInteract(std::string item);
 };
 
 

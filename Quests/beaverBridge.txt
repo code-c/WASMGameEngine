@@ -1,0 +1,4 @@
+qId: 1
+mainStory: true
+Object: Befriend the beaver to get you across the river!
+Items Acquired: bridge
