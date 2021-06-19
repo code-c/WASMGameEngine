@@ -30,7 +30,7 @@ add_executable(FernQuest src/FernQuest.cpp
         src/NPC.cpp src/NPC.h
         src/Interact.cpp src/Interact.h
         #FernQuestBindings.cpp
-        src/Map.cpp src/Map.h)
+        src/Maps.cpp src/Maps.h)
 
 
 if(Boost_FOUND)

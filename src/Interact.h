@@ -5,14 +5,21 @@
 #ifndef FERNQUEST_INTERACT_H
 #define FERNQUEST_INTERACT_H
 
+#include <iostream>
+#include "Maps.h"
+#include "json.hpp"
 
 class Interact {
 private:
     bool interacted;
+    static Maps gameMaps;
+
 public:
-    //Interact();
+    Interact();
     static std::string playerMove();
     static std::string playerItemInteract(std::string item);
+    static std::string getMap(int mapNum);
+    static nlohmann::json getJSON(int mapNum);
 };
 
 
