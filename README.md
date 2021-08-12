@@ -1,42 +1,7 @@
-# FernQuest
-A nature based item gathering game developed for my dad
+# Web Assembly Game Engine API
 
-- based off an old game 'Kings Quest'
+I've started development on a game engine. Its a long process as im finding out. However my final goal is to have an engine that can be used as a webassembly library in Node.js
 
-Clients Notes:
-
-// strenght perameter
-// witty perameter
-// stealth perameter
-//
-
-// clothes perameter?
-
-// item interaction
-// holding
-//
-// money
-
-// find magician to grant stuff and improve upon equipment to him (he is many places)
-
-// connect things from a stream (beaver builds you a bridge)
-// many interactions with water
-// moat (has to unlock draw bridge in some away)
-  // always something in castle for power source(maybe a really good sourcxe)
-
-
-// he can get stuff from animals
-
-
-// Items
-// pinecones
-// acorns
-// fruits
-//
-
-//characters
-// all animals in the forest
-  // each animal teaches the main character something
-    // if he saves them though
-
-// raccoons are theives stay away from them
+#### whats currently being developed:
+- map location
+- map generation from textfiles
